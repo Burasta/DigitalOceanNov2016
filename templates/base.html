@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../static/bootstrap.min.css"/>
+        <title>Twitten By - {% block title %}{% endblock %}</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    {% endblock %}
+</head>
+<body>
+    {% include 'header.html' %}
+    {% block body %}
+    {%  endblock %}
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    {% endblock %}
+</body>
+</html>
