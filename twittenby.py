@@ -3,6 +3,7 @@ import sqlalchemy
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
@@ -11,6 +12,7 @@ def hello_world():
 @app.route('/hello')
 def hello2():
     return render_template('test.html')
+
 
 @app.route('/tweets')
 def tweets():
