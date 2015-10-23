@@ -1,12 +1,37 @@
 {% extends 'base.html' %}
 
+{% block head %}
+    {{ super() }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#getrdun").click(function () {
+            $.ajax({
+                method: "GET",
+                url: "/get_tweets/"
+            })
+
+            .done(function (jdata) {
+                var items = [];
+
+                $.each(JSON.parse(jdata), function (i, obj) {
+                    items.push("<p>" + obj.content + "</p>");
+                });
+
+                $("#tweets").append(items);
+            });
+        });
+    });
+    </script>
+
+{% endblock %}
+
 {% block title %}Live Feed{% endblock %}
 
 {% block body %}
-    <div class="container">
-    <p>And feast thine eyes upon that which they have spoketh.</p>
-    </div>
-    <div class="container">
-
+    <div class="container" id="tweets">
+        <p>And feast thine eyes upon that which they have spoketh.</p><br><br><br>
+        <button id="getrdun" class="btn">Update Tweets</button>
+        <br><br><br>
     </div>
 {% endblock %}
