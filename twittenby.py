@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import json
 
+
 app = Flask(__name__)
 
 
@@ -14,8 +15,23 @@ def tweets():
     return render_template('tweets.html')
 
 
-@app.route('/get_tweets/')
+@app.route('/get_tweets', methods=['GET'])
 def get_tweets():
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+
+    engine = create_engine('sqlite:///C:/Users/Brandon-Camp/PycharmProjects/twittenby/tweets.db')
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    result = session.execute("SELECT tweet FROM tweets ORDER BY tweet_id DESC")
+
+    derp = [{"content": row['tweet']} for row in result]
+    return json.dumps(derp)
+
+
+@app.route('/post_tweets', methods=['POST'])
+def post_tweets():
+    from flask import request
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy import Column, Integer, String
@@ -32,16 +48,14 @@ def get_tweets():
         def __repr__(self):
             return "<tweet(tweet='%s')>" % self.tweet
 
-        def __getitem__(self):
-            return self.tweet
-
+    data = request.form.textarea
     engine = create_engine('sqlite:///C:/Users/Brandon-Camp/PycharmProjects/twittenby/tweets.db')
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.execute("SELECT tweet FROM tweets ORDER BY tweet_id DESC")
+    session.add(data)
+    session.commit()
+    return "Success!"
 
-    derp = [{"content": row['tweet']} for row in result]
-    return json.dumps(derp)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+__name__ == '__main__'
+app.run(debug=True)
