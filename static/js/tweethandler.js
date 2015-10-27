@@ -16,7 +16,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("#submission").click(function () {
+    $("#submission").submit(function () {
         var value = $("#tweettext").val();
     $.ajax({
         type: "POST",
