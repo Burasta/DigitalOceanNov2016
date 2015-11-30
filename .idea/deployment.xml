@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Droplet" promptOnLocalOverwrite="false">
+    <serverData>
+      <paths name="Droplet">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/test" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/var/www/test/app/app_venv/local" />
+            <excludedPath path="/var/www/test/app/app_venv/lib" />
+            <excludedPath path="/var/www/test/app/app_venv/bin" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

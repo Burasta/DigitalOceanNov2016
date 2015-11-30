@@ -1,0 +1,42 @@
+{% block navbar %}
+    <link type="text/css" rel="stylesheet" href="../static/navbar-fixed-top.css"/>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../static">Vander&#8217;s Corner</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="../static">Home</a></li>
+                    <li><a href="http://imythess.com/" target="_blank">Imythess</a></li>
+                    <li><a href="../static">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Characters <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../static">Hong</a></li>
+                            <li><a href="../static">Vander</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Less Played:</li>
+                            <li><a href="../static">Ella</a></li>
+                            <li><a href="../static">Sark</a></li>
+                            <li><a href="../static">Naom</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../static">Current Topics</a></li>
+                    <li><a href="../static">Completed Topics</a></li>
+                    <li><a href="../static">Etc.</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+{% endblock %}
