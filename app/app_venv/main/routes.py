@@ -1,5 +1,5 @@
 from . import app
-from flask import render_template
+from flask import render_template, redirect
 from util.forms import TweetForm, ChatRegistration
 from util.models import Tweet, db, User
 import json
@@ -8,6 +8,11 @@ import json
 @app.route('/')
 def welcome():
     return render_template('home.html')
+
+
+@app.route('/chat/')
+def chat():
+    return redirect('http://www.appletarsenal.com/chat/')
 
 
 @app.route('/helpme/')
