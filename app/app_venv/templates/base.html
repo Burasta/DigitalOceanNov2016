@@ -6,6 +6,8 @@
     {% block head %}
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="../static/bootstrap.min.css"/>
+        <link rel="shortcut icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/x-icon">
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     {% endblock %}
     <title>Twitten By - {% block title %}{% endblock %}</title>

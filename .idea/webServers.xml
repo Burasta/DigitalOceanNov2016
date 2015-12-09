@@ -2,8 +2,15 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="4134f56e-0b0f-4a5d-aa8b-fc4533e95c47" name="Droplet" url="http://162.243.101.188">
+      <webServer id="4134f56e-0b0f-4a5d-aa8b-fc4533e95c47" name="Digital Ocean" url="http://162.243.101.188">
         <fileTransfer host="162.243.101.188" port="22" accessType="SFTP" password="dfcbdf92df9ddf9adf9cdf98df9bdf99df9edf9f" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0c67658d-cdaa-41f0-83dc-ad5fcbd73e0e" name="GoDaddy" url="http://192.186.211.7">
+        <fileTransfer host="192.186.211.7" port="22" accessType="SFTP" username="bc01477">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

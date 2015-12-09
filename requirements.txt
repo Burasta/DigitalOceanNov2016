@@ -1,0 +1,11 @@
+Flask
+Flask-WTF
+WTForms
+SQLAlchemy
+Flask-SQLAlchemy
+Flask-Bootstrap
+Werkzeug
+itsdangerous
+dominate
+requests
+Jinja2

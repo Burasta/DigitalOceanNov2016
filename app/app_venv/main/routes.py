@@ -6,7 +6,7 @@ import json
 
 
 @app.route('/')
-def welcome():
+def home():
     return render_template('home.html')
 
 
@@ -15,9 +15,9 @@ def chat():
     return redirect('http://www.appletarsenal.com/chat/')
 
 
-@app.route('/helpme/')
-def hello_world():
-    return render_template('home.html')
+@app.route('/user/<int:profileid>')
+def user(profileid):
+    return redirect('http://imythess.com/profile/%d' % profileid)
 
 
 @app.route('/tweets/', methods=["GET", "POST"])

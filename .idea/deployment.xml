@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Droplet" promptOnLocalOverwrite="false">
+  <component name="PublishConfigData" promptOnLocalOverwrite="false" uploadOnCheckin="4134f56e-0b0f-4a5d-aa8b-fc4533e95c47">
     <serverData>
-      <paths name="Droplet">
+      <paths name="Digital Ocean">
         <serverdata>
           <mappings>
             <mapping deploy="/var/www/test" local="$PROJECT_DIR$" web="/" />
@@ -14,6 +14,14 @@
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="GoDaddy">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/bc01477/public_html" local="$PROJECT_DIR$/app/app_venv" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="Digital Ocean" />
   </component>
 </project>

@@ -10,9 +10,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../static">Vander&#8217;s Corner</a>
+                <span class="navbar-brand">Vander&#8217;s Corner</span>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse"><!--.nav-collapse -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="http://imythess.com/" target="_blank">Imythess</a></li>
@@ -21,13 +21,14 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Characters <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('home') }}">Hong</a></li>
-                            <li><a href="{{ url_for('home') }}">Vander</a></li>
+                            <li><a href="{{ url_for('user', profileid=2103881) }}" target="_blank">Hong</a></li>
+                            <li><a href="{{ url_for('user', profileid=2103641) }}" target="_blank">Vander</a></li>
+                            <li><a href="{{ url_for('user', profileid=2088718) }}" target="_blank">Sark</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Less Played:</li>
-                            <li><a href="{{ url_for('home') }}">Ella</a></li>
-                            <li><a href="{{ url_for('home') }}">Sark</a></li>
-                            <li><a href="{{ url_for('home') }}">Naom</a></li>
+                            <li><a href="{{ url_for('user', profileid=2105903) }}" target="_blank">Ella</a></li>
+                            <li><a href="{{ url_for('user', profileid=2087619) }}" target="_blank">Leverit</a></li>
+                            <li><a href="{{ url_for('user', profileid=2088086) }}" target="_blank">Naom</a></li>
                         </ul>
                     </li>
                 </ul>

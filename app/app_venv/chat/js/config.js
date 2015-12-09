@@ -153,23 +153,23 @@ var ajaxChatConfig = {
 
     // Defines the list of allowed emoticon codes:
     emoticonCodes: [
-        ':)',
-        ':(',
-        ';)',
-        ':P',
-        ':D',
-        ':|',
-        ':O',
-        ':?',
-        '8)',
-        '8o',
-        'B)',
-        ':-)',
-        ':-(',
-        ':-*',
-        'O:-D',
-        '>:-D',
-        ':o)',
+        ':smile:',
+        ':sad:',
+        ':wink:',
+        ':tongue:',
+        ':grin:',
+        ':plain:',
+        ':surprise:',
+        ':confused:',
+        ':glasses:',
+        ':eek:',
+        ':cool:',
+        ':smile-big:',
+        ':crying:',
+        ':kiss:',
+        ':angel:',
+        ':devilish:',
+        ':monkey:',
         ':idea:',
         ':important:',
         ':help:',
@@ -234,15 +234,15 @@ var ajaxChatConfig = {
     cookieSecure: null,
 
     // The name of the chat bot:
-    chatBotName: 'ChatBot',
+    chatBotName: 'Administrative Golem',
     // The userID of the chat bot:
     chatBotID: 2147483647,
 
     // Allow/Disallow registered users to delete their own messages:
-    allowUserMessageDelete: true,
+    allowUserMessageDelete: false,
 
     // Minutes until a user is declared inactive (last status update) - the minimum is 2 minutes:
-    inactiveTimeout: 2,
+    inactiveTimeout: 600,
 
     // UserID plus this value are private channels (this is also the max userID and max channelID):
     privateChannelDiff: 500000000,
@@ -253,7 +253,7 @@ var ajaxChatConfig = {
     showChannelMessages: true,
 
     // Max messageText length:
-    messageTextMaxLength: 1040,
+    messageTextMaxLength: 999,
 
     // Defines if the socket server is enabled:
     socketServerEnabled: false,
