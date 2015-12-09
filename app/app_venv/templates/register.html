@@ -8,7 +8,8 @@
 {% block title %}Live Feed{% endblock %}
 
 {% block content %}
-    <div class="container" id="writetweets">
+    <div class="container" id="form">
+        {{ super() }}
         <form method="POST">
             {{ wtf.quick_form(form, id='submission') }}
         </form>

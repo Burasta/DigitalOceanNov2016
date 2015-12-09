@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnLocalOverwrite="false" uploadOnCheckin="4134f56e-0b0f-4a5d-aa8b-fc4533e95c47">
+  <component name="PublishConfigData" promptOnLocalOverwrite="false">
     <serverData>
       <paths name="Digital Ocean">
         <serverdata>
@@ -22,6 +22,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="Digital Ocean" />
   </component>
 </project>

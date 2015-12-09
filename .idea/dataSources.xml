@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="95231710">
+  <component name="DataSourceManagerImpl" format="xml" hash="2454664744">
     <data-source source="LOCAL" name="SQLite -" uuid="2b710053-de56-4b26-aa02-9f6209cd5f69">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/tweets.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Sqlite (Xerial) - chat.db" uuid="8174a346-e1c5-4181-84c3-c6de00eefbb9">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:chat.db</jdbc-url>
     </data-source>
   </component>
 </project>

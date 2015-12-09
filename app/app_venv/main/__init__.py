@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder=os.path.join(basedir, '../templates'),
             static_folder=os.path.join(basedir, '../static'))
 
 app.config.from_pyfile('../config.cfg')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://vander:a870621345@localhost'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat.db'
 
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)

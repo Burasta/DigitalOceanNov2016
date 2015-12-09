@@ -3,6 +3,12 @@ from wtforms import TextAreaField, SubmitField, PasswordField, StringField
 from wtforms.validators import DataRequired, EqualTo
 
 
+class ChatLogin(Form):
+    userName = StringField('Username', validators=[DataRequired()])
+    userPassword = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
 class ChatRegistration(Form):
     userName = StringField('Username', validators=[DataRequired()])
     userPassword = PasswordField('Password', validators=[DataRequired()])
