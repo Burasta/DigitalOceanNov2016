@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    {{ super() }}
+    {% if session.get('user') != None %}
+        <div class="container"><p>Hello, {{ session.get('user') }}! Your UserID is {{ session.get('userid') }}</p></div>
+    {% else %}
+        <div class="container"><p>Hello, stranger!</p></div>
+    {% endif %}
+{% endblock %}

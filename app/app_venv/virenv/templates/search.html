@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block head %}
+    {{ super() }}
+    {% block title %}Shop Search{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container" id="form">
+    {{ super() }}
+    <form method="POST">
+        {{ wtf.quick_form(form, id='submission') }}
+    </form>
+</div>
+<div class="container" id="cart">
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="../static/js/popup-search.js"></script>
+{% endblock %}
